@@ -13,3 +13,8 @@ gem 'rails_12factor', group: :production
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'faker'
+
+group :test, :development do
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara'
+end

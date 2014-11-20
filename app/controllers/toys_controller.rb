@@ -13,7 +13,7 @@ class ToysController < ApplicationController
   end
 
   def create
-    @toy = Toy.new(params.require(:toy).permit(:name))
+    @toy = Toy.new(params.require(:toy).permit(:name, :cat_id))
     @toy.save
     redirect_to toys_path
   end
@@ -23,7 +23,7 @@ class ToysController < ApplicationController
   end
 
   def update
-    Toy.find(params[:id]).update(params.require(:toy).permit(:name))
+    Toy.find(params[:id]).update(params.require(:toy).permit(:name, :cat_id))
     redirect_to toys_path
   end
 

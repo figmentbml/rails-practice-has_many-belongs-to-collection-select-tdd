@@ -5,5 +5,9 @@
 <h3>This cat's toys are...</h3>
 
 <div class="well">
-  <em>Replace this with a list of the toys that belong to this cat</em>
+  <ul>
+    <% @cat.toys.each do |toy| %>
+    <li><%= toy.name %></li>
+    <% end %>
+  </ul>
 </div>

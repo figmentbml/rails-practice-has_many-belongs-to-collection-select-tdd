@@ -4,8 +4,10 @@
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
-
-  <em>insert collection select for Cat</em>
+  <div class="form-group">
+    <%= f.label :cat_id %>
+    <%= f.collection_select(:cat_id, Cat.all, :id, :name, {}, {class: "form-control"}) %>
+  </div>
   <br>
   <br>
 
